@@ -4,7 +4,7 @@ import Welcome from './Welcome';
 function App() {
   return (
             <>
-               <Welcome age={28} />   
+               <Welcome age={28} name={<strong>Jhon</strong>} />   
             </>
   );
 }
