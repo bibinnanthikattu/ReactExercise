@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const hello = "Hello, World !"
   return (
-<></>
+    <h1>{hello}</h1>
   );
 }
 
