@@ -13,7 +13,8 @@ export default class Welcome extends Component {
             {/* you can't add a value to the name prop. but you can add a default value to the props. It will take the default value if no props is passed from the parent  */}
             {/* <p>Your age is {this.props.age} .</p> */}
             {/* {ageFilter > 18 ? <Age age={ageFilter} />: null }  */}
-            {ageFilter ? <Age age={ageFilter} /> :null}
+            {/* {ageFilter ? <Age age={ageFilter} /> :null} */}
+            {ageFilter >18 && ageFilter <65 ? <Age age={ageFilter} /> :null}
       </div>
     )
   }
