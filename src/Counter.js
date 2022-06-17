@@ -2,16 +2,17 @@ import React, { Component } from 'react'
 import CounterDisplay from './CounterDisplay';
 
 export default class 
-extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            counter:props.initialValue,
+    extends Component {
+        state = {
+            counter:this.props.initialValue,
         }
+  
+    componentDidMount() {
         setInterval(() => {
             this.setState((state,props)=>({counter:state.counter +props.increment}))
-        },props.timeout)
+        },this.props.timeout)
     }
+
   render() {
     return (
       <div>

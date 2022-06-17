@@ -5,7 +5,7 @@ import Counter from './Counter';
 function App() {
   return (
     <>
-      <Counter increment={2} initialValue={10} timeout={500}  />
+      <Counter increment={1} initialValue={0} timeout={1000}  />
     </>
   );
 }
