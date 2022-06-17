@@ -5,16 +5,16 @@ extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            counter:0,
+            counter:props.initialValue,
         }
         setInterval(() => {
-            this.setState((state,props)=>({counter:state.counter +1}))
-        },1000)
+            this.setState((state,props)=>({counter:state.counter +props.increment}))
+        },props.timeout)
     }
   render() {
     return (
       <div>
-            <p>Counter is : {this.state.counter}</p>
+            <h1>Counter is : {this.state.counter}</h1>
       </div>
     )
   }
