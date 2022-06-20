@@ -1,10 +1,15 @@
 import './App.css';
 import InteractiveWelcome from './InteractiveWelcome';
+import Login from './Login';
 
 function App() {
+  let onLogin = (state) => {
+    console.log(state)
+  }
   return (
     <>
-      <InteractiveWelcome />
+      {/* <InteractiveWelcome /> */}
+      <Login func={onLogin} />
               </>
 
   );
