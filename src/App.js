@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import InteractiveWelcome from './InteractiveWelcome';
 
@@ -6,7 +5,8 @@ function App() {
   return (
     <>
       <InteractiveWelcome />
-    </>
+              </>
+
   );
 }
 
