@@ -1,6 +1,7 @@
 import './App.css';
 import InteractiveWelcome from './InteractiveWelcome';
 import Login from './Login';
+import UncontrolledLogin from './UncontrolledLogin';
 
 function App() {
   let onLogin = (state) => {
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
       {/* <InteractiveWelcome /> */}
-      <Login func={onLogin} />
+      {/* <Login func={onLogin} /> */}
+      <UncontrolledLogin />
               </>
 
   );
