@@ -30,11 +30,13 @@ export default class TodoList extends Component {
 // to remove list item
   
   removeListItem = (index) => {
-   
+    const remove = this.state.items;
+    const removedItem = remove.splice(index,1)
+    this.setState({items:remove})
 }
   render() {
     const lists = this.state.items.map((item, index) => (
-      <li key={item + index}>{item} </li>
+      <li key={item + index}>{item} <button onClick={()=>this.removeListItem(index)}>Remove</button> </li>
     ));
     return (
       <div>
