@@ -27,11 +27,14 @@ export default class TodoList extends Component {
 // to remove items array
   removeItems = () => this.setState({ items: [] })
     
-
-
+// to remove list item
+  
+  removeListItem = (index) => {
+   
+}
   render() {
     const lists = this.state.items.map((item, index) => (
-      <li key={item + index}>{item}</li>
+      <li key={item + index}>{item} </li>
     ));
     return (
       <div>
