@@ -5,6 +5,7 @@ export default class TodoList extends Component {
     super(props);
     this.state = {
       items: [],
+      name:''
     };
   }
   addItem = (e) => {
@@ -12,13 +13,18 @@ export default class TodoList extends Component {
     const value = e.target.item.value;
     this.setState(
       ({items}) => {return {items:[...items, value]}}
-      // {
-      //   let { items } = prevState;
-      //   return [...items,value]
-      // }
-    );
+      );
     console.log(this.state.items);
+
+    // clearing the value after form submission
+    this.setState({name:''})
   };
+  // to get the value of the input and assigning into the state
+    getInputValue = (e) => {
+      const value=e.target.value
+      this.setState({name:value})
+  }
+
 
   render() {
     const lists = this.state.items.map((item, index) => (
@@ -27,8 +33,8 @@ export default class TodoList extends Component {
     return (
       <div>
         <form onSubmit={this.addItem}>
-          <input name="item" />
-          <button type="submit">Add Item</button>
+          <input name="item" value={this.state.name} onChange={this.getInputValue} />
+          <button type="submit" >Add Item</button>
         </form>
         <ul>{lists}</ul>
       </div>
