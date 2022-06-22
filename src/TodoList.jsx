@@ -14,7 +14,7 @@ export default class TodoList extends Component {
     this.setState(
       ({items}) => {return {items:[...items, value]}}
       );
-    console.log(this.state.items);
+    // console.log(this.state.items);
 
     // clearing the value after form submission
     this.setState({name:''})
@@ -24,6 +24,9 @@ export default class TodoList extends Component {
       const value=e.target.value
       this.setState({name:value})
   }
+// to remove items array
+  removeItems = () => this.setState({ items: [] })
+    
 
 
   render() {
@@ -35,6 +38,7 @@ export default class TodoList extends Component {
         <form onSubmit={this.addItem}>
           <input name="item" value={this.state.name} onChange={this.getInputValue} />
           <button type="submit" >Add Item</button>
+          <button type="reset" onClick={this.removeItems}>Reset</button>
         </form>
         <ul>{lists}</ul>
       </div>
