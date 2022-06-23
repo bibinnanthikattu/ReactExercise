@@ -7,7 +7,7 @@ export default class Welcome extends Component {
     }
   render() {
     return (
-        <div>
+        <div className='welcome'>
         <p>Welcome {this.props.name}</p>
       </div>
     )
