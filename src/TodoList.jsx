@@ -35,9 +35,9 @@ export default class TodoList extends Component {
     this.setState({items:remove})
 }
   render() {
-    const lists = this.state.items.map((item, index) => (
-      <li key={item + index}>{item} <button onClick={()=>this.removeListItem(index)}>Remove</button> </li>
-    ));
+    // const lists = this.state.items.map((item, index) => (
+    //   <li key={item + index}>{item} <button onClick={()=>this.removeListItem(index)}>Remove</button> </li>
+    // ));
     return (
       <div>
         <form onSubmit={this.addItem}>
@@ -45,7 +45,7 @@ export default class TodoList extends Component {
           <button type="submit" >Add Item</button>
           <button type="reset" onClick={this.removeItems}>Reset</button>
         </form>
-        <ul>{lists}</ul>
+        <ul>{this.props.render(this.state.items,()=>this.removeListItem())}</ul>
       </div>
     );
   }

@@ -5,7 +5,16 @@ import TodoList from './TodoList'
 function App() {
   return (
     <>
-      <TodoList />
+      <TodoList
+        render={(state,removeFunc) => {
+          const lists = state.map((item, index) => (
+            <li key={item + index}>{item} <button onClick={()=>removeFunc(index)}>Remove</button> </li>
+          ));
+          return lists;
+        }}
+      >
+
+      </TodoList>
     </>
   );
 }
