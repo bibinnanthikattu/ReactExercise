@@ -6,8 +6,8 @@ import Children from './Children';
 function App() {
   return (
     <>
-      <Container>
-        {<h1>This is an example for Component composition </h1>}
+      <Container title={<h1>This is the Header for the container component</h1>}>
+        {<h3>This is an example for Component composition </h3>}
         <Children />
       </Container>
     </>
