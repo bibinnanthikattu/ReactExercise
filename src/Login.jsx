@@ -1,31 +1,28 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-export default class Login extends Component {
-    state = {
-        username: '',
-        password: '',
-        remember:false
-    }
-    handleInput = (e) => {
+export default function Login(props) {
+  const [data, setData] = useState({
+    username: '',
+    password: '',
+    remember:false
+  })
+  
+    const handleInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         const type = e.target.type;
         const checked = e.target.checked;
-        this.setState({[name]:type==='checkbox'? checked:value})
+      setData({ ...data,[name]: type === 'checkbox' ? checked : value })
     }
-    handleResetBtn = () => {
-        this.setState({ username: '', password: '', remember: false })
-        // console.log(this.state);
-    }
-  render() {
+
+
     return (
         <div>
-            <input type="text" name='username' value={this.state.username} onChange={this.handleInput} />
-            <input type="password" name='password' value={this.state.password} onChange={this.handleInput}/>
-            <input type="checkbox" name='remember' checked={this.state.remember} onChange={this.handleInput}/>
-            <button disabled={!this.state.username && !this.state.password} onClick={() => this.props.func(this.state)}>Login</button>
-            <button onClick={this.handleResetBtn}>Reset</button>
+            <input type="text" name='username' value={data.username} onChange={handleInput} />
+            <input type="password" name='password' value={data.password} onChange={handleInput}/>
+            <input type="checkbox" name='remember' checked={data.remember} onChange={handleInput}/>
+            <button disabled={!data.username && !data.password  } onClick={() => props.func(data)}>Login</button>
       </div>
     )
   }
-}
+
