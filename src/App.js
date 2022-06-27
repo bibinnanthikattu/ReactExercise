@@ -1,14 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import ClickCounter from './ClickCounter';
-import ClickTracker from './ClickTracker';
+
+import Login from './Login';
+
 
 function App() {
+  let onLogin = (state) => {
+    console.log(state)
+  }
   return (
     <>
-      <ClickCounter />
-      {/* <ClickTracker /> */}
-    </>
+
+      <Login  />
+              </>
+
+
   );
 }
 
