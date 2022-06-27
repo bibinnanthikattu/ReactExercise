@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
       {/* <Welcome  />    */}
-      <Sum numbers={numbers}/>
+      <Sum />
             </>
   );
 }
