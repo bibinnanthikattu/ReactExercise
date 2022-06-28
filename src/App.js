@@ -8,6 +8,7 @@ import Login from './Login';
 import Counter from './Counter';
 import { useState } from 'react';
 import GithubUser from './GithubUser';
+import GithubUserList from './GithubUserList';
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
 
       {/* <button onClick={handleToggleCounter}>Toggle Counter</button>
      {mount && <Counter increment={1} initialValue={0} timeout={1000}  />}  */}
-      <GithubUser username="bibinnanthikattu" password={12345} />
+      {/* <GithubUser  /> */}
+      <GithubUserList />
     </>
 
   );
