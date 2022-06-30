@@ -11,7 +11,7 @@ import Counter from './Counter';
 import { useState } from 'react';
 import GithubUser from './GithubUser';
 import GithubUserList from './GithubUserList';
-
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
 
@@ -25,18 +25,11 @@ function App() {
   const handleToggleCounter= ()=>setMount(state=>!state)
   return (
     <>
-
-      {/* <HookCounter initialValue={10} /> */}
-      {/* <HookForm /> */}
-  
-
-      {/* <Login func={onLogin} /> */}
-      {/* <ClickCounter onCounterChange={onCounterChange} /> */}
-
-      {/* <button onClick={handleToggleCounter}>Toggle Counter</button>
-     {mount && <Counter increment={1} initialValue={0} timeout={1000}  />}  */}
-      <GithubUser username='bibinnanthikattu' />
-      {/* <GithubUserList /> */}
+      {/* <Routes >
+        <Route to='/users' element={<GithubUser username='bibinnanthikattu' />}/>
+      </Routes> */}
+<GithubUser username='bibinnanthikattu' />
+      
     </>
   );
 }

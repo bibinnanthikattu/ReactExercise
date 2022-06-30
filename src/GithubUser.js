@@ -3,7 +3,7 @@ import useGithubUser from './useGithubUser'
 
 export default function GithubUser({ username, password }) {
 
-    const { data,error,loading,getUser } = useGithubUser(username);
+    const { data,error,loading } = useGithubUser(username);
     console.log(data);
     // useEffect(() => {
     //     getUser(username)
