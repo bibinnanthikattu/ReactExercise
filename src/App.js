@@ -21,7 +21,10 @@ export default function App() {
         <h6><Link to="/Link3">Link three</Link></h6> 
       <Routes>
         <Route path='/' element={<Welcome name='React Router'/>}  />
-          <Route path='/users' element={<GithubUserList />} />
+        <Route path='/users' element={<GithubUserList />} >
+        <Route index element={<p>Add a user and select it</p>} />
+         <Route index path=':username' element={<ShowGithubUser />} />
+          </Route>
         <Route path='/counter' element={<ClickCounter />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
