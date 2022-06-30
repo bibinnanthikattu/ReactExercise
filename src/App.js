@@ -8,6 +8,7 @@ import ShowGithubUser from './ShowGithubUser';
 import Link1 from './LinkOne';
 import Link2 from './Link2';
 import NotFound from './NotFound';
+import GithubUserList from './GithubUserList';
 
 export default function App() {
   // const numbers = [10, 20, 30, 40, 50]
@@ -20,7 +21,7 @@ export default function App() {
         <h6><Link to="/Link3">Link three</Link></h6> 
       <Routes>
         <Route path='/' element={<Welcome name='React Router'/>}  />
-          <Route path='users/:username' element={<ShowGithubUser />} />
+          <Route path='/users' element={<GithubUserList />} />
         <Route path='/counter' element={<ClickCounter />} />
         <Route path='*' element={<NotFound />} />
       </Routes>

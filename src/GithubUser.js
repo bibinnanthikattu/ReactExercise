@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function GithubUser({ username, password }) {
     const [data, setData] = useState(null)
     const [error,setError]= useState(null)
-
+console.log(username);
 
     async function GithubUser(username) {
         try {
