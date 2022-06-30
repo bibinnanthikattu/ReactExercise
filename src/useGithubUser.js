@@ -6,7 +6,11 @@ const fetcher = url => fetch(url).then(response => response.json())
 
 export default function useGithubUser(username) {
     
-    const { data, error } = useSWR(username?`https://api.github.com/users/${username}`:null, fetcher)
+    const { data, error, mutate } = useSWR(username ? `https://api.github.com/users/${username}` : null, fetcher)
+    
+    const reFetchData = () => {
+        mutate()
+    }
     
     // const [data, setData] = useState(null)
     // const [error, setError] = useState(null)
@@ -34,6 +38,7 @@ export default function useGithubUser(username) {
             data,
             error: error,
             loading: !data && !error,
+            reFetchData:reFetchData
            
         }
   )
