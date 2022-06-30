@@ -6,7 +6,7 @@ const fetcher = url => fetch(url).then(response => response.json())
 
 export default function useGithubUser(username) {
     
-    const { data, error } = useSWR(`https://api.github.com/users/${username}`, fetcher)
+    const { data, error } = useSWR(username?`https://api.github.com/users/${username}`:null, fetcher)
     
     // const [data, setData] = useState(null)
     // const [error, setError] = useState(null)

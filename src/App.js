@@ -28,7 +28,7 @@ function App() {
       {/* <Routes >
         <Route to='/users' element={<GithubUser username='bibinnanthikattu' />}/>
       </Routes> */}
-<GithubUser username='bibinnanthikattu' />
+<GithubUser username='' />
       
     </>
   );

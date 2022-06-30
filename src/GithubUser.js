@@ -10,7 +10,7 @@ export default function GithubUser({ username, password }) {
     // },[username,getUser])
   return (
       <div>
-          {data && <h1>The name is : {data.name}</h1>}
+          {data ? <h1>The name is : {data.name}</h1>:<h1>Add user</h1>}
     </div>
   )
 }
