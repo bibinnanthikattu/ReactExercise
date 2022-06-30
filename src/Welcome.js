@@ -7,7 +7,6 @@ export default function Welcome ({name}) {
         <div>
 
         <h3>This is a function component :{name}</h3>
-
       </div>
     )
   }
