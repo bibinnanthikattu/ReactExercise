@@ -5,18 +5,25 @@ import Sum from './Sum';
 import { Routes, Route, Link } from "react-router-dom";
 import ClickCounter from './ClickCounter';
 import ShowGithubUser from './ShowGithubUser';
+import Link1 from './LinkOne';
+import Link2 from './Link2';
 
 export default function App() {
   // const numbers = [10, 20, 30, 40, 50]
 
   return (
     <>
+
+        <h6><Link to='/LinkOne'>Link one</Link></h6> 
+        <h6><Link to='/Link2'>Link two</Link></h6> 
+        <h6><Link to='/Link3'>Link three</Link></h6> 
       <Routes>
         <Route path='/' element={<Welcome name='React Router'/>}  />
           <Route path='users/:username' element={<ShowGithubUser />} />
         <Route path='/counter' element={<ClickCounter />} />
       </Routes>
       {/* <Sum /> */}
+      {/* <Link1 /> */}
             </>
 
 // import ClickCounter from './ClickCounter';
